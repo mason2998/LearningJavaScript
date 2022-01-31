@@ -62,7 +62,7 @@
 
 
 // ############################   Coding Challenge 2 ####################################
-// Improving and adapting previous 
+// Improving and adapting previous
 
 // markMass = 78
 // markHeight = 1.69
@@ -85,7 +85,7 @@
 
 // console.log(`Mark's BMI is ${markBMI}, and Johns is ${johnBMI}`)
 
-// CORRECT : 
+// CORRECT :
 // 27.31 28.93 false
 // John has higher BMI.
 // Mark's BMI is 27.31, and Johns is 28.93
@@ -175,3 +175,59 @@
 
 // ############################   Coding Challenge 7 ####################################
 
+// var Mark = {
+//     name: "Mark",
+//     mass: 85,
+//     height: 1.90,
+//     BMI: null,
+//     calcBMI: function () {
+//         this.BMI = (this.mass) / (this.height ** 2)
+//         return this.BMI
+//     }
+// }
+
+// var John = {
+//     name: "John",
+//     mass: 85,
+//     height: 2.00,
+//     BMI: null,
+//     calcBMI: function () {
+//         this.BMI = (this.mass) / (this.height ** 2)
+//         return this.BMI
+//     }
+// }
+
+// if (Mark.calcBMI() > John.calcBMI()) {
+//     console.log(`Mark (${Mark.BMI}) has higher BMI than John (${John.BMI}).`)
+// }
+// else console.log(`John (${John.BMI}) has higher BMI than Mark (${Mark.BMI}).`)
+
+// ############################   Coding Challenge 8 ####################################
+
+var bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+var tips = [];
+var totals = [];
+var tip;
+var total;
+
+function calcTip(value) {
+    if (value >= 50 && value <= 300) {
+        tip = value * 0.15;
+        return tip;
+    }
+    else {
+        tip = value * 0.2;
+        return tip;
+    }
+}
+
+for (let bill of bills) {
+    tip = calcTip(bill);
+    total = bill + tip;
+    tips.push(tip);
+    totals.push(total)
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
