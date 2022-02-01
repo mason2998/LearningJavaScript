@@ -1,6 +1,5 @@
 /// This file is a store of all exercises completed over the course of completing the udemy course: The Complete JavaScript Course 2021: From Zero to Expert!
 
-
 // PART 1 - THE FUNDAMENTALS To save me watching all these lecture I've just blastedthrough the questions to see what i've missed
 
 // ############################   Practice Questions ####################################
@@ -29,18 +28,15 @@
 // console.log(description)
 // console.log(`New string ${country} and ${population - 5000}`)
 
-
 // console.log('9' + '7')
 // console.log('13' + '7' + 20)
 // console.log('123' > 57)
 // console.log('123' < 57)
 
-
 // ######################################################################################
 //Exercises on fundamentals seems to be wasting quite abit of time. Until I get further on I'll stick
 //to the challenges
 // ######################################################################################
-
 
 // ############################   Coding Challenge 1 ####################################
 
@@ -59,7 +55,6 @@
 // console.log(markBMI, johnBMI, markMore)
 
 // CORRECT : 27.309968138370508 24.194608809993426 true
-
 
 // ############################   Coding Challenge 2 ####################################
 // Improving and adapting previous
@@ -106,7 +101,6 @@
 // let check2 = dolphinsAv > koalasAv
 // console.log(dolphinsAv);
 // console.log(koalasAv);
-
 
 // if (dolphinsAv > koalasAv && dolphinsAv >= 100) {
 //     console.log("The win goes to the dolphins.");
@@ -204,30 +198,55 @@
 
 // ############################   Coding Challenge 8 ####################################
 
-var bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-var tips = [];
-var totals = [];
-var tip;
-var total;
+// var bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// var tips = [];
+// var totals = [];
+// var tip;
+// var total;
 
-function calcTip(value) {
-    if (value >= 50 && value <= 300) {
-        tip = value * 0.15;
-        return tip;
-    }
-    else {
-        tip = value * 0.2;
-        return tip;
-    }
+// // Single line logic
+// function calcTip(value) {
+//     return value >= 50 && value <= 300 ? value * 0.15 :
+//         value * 0.20
+// }
+
+// function Average(array) {
+//     let sum = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         sum += array[i];
+//     }
+//     let av = sum / (array.length);
+//     return av;
+// }
+
+// for (let bill of bills) {
+//     tip = calcTip(bill);
+//     total = bill + tip;
+//     tips.push(tip);
+//     totals.push(total)
+// }
+
+// console.log(bills);
+// console.log(tips);
+// console.log(totals);
+// console.log(`The average total bill is ${Average(totals)}`);
+
+// OUTPUT
+
+// (10) [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+// (10) [4.4, 44.25, 26.4, 88, 7.4, 15.75, 2, 220, 12.9, 7.8]
+// (10) [26.4, 339.25, 202.4, 528, 44.4, 120.75, 12, 1320, 98.9, 59.8]
+// The average total bill is 275.19
+
+// ############################   Coding Challenge 9 ####################################
+'use strict';
+const temps = [17, 21, 23];
+
+function printForcast(arr) {
+  let outString = 'Forcast: ';
+  for (let i = 0; i < arr.length; i++) {
+    outString = outString.concat(`${arr[i]}\u00B0C in ${i} days... `);
+  }
+  console.log(outString);
 }
-
-for (let bill of bills) {
-    tip = calcTip(bill);
-    total = bill + tip;
-    tips.push(tip);
-    totals.push(total)
-}
-
-console.log(bills);
-console.log(tips);
-console.log(totals);
+printForcast(temps);
