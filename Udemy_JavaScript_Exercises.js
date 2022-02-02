@@ -243,10 +243,12 @@
 const temps = [17, 21, 23];
 
 function printForcast(arr) {
-  let outString = 'Forcast: ';
-  for (let i = 0; i < arr.length; i++) {
-    outString = outString.concat(`${arr[i]}\u00B0C in ${i} days... `);
-  }
-  console.log(outString);
+    let outString = 'Forcast: ';
+    for (let i = 0; i < arr.length; i++) {
+        outString = outString.concat(`${arr[i]}\u00B0C in ${i + 1} days... `);
+    }
+    console.log(outString);
 }
 printForcast(temps);
+
+
